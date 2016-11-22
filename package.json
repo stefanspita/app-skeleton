@@ -1,0 +1,27 @@
+{
+  "name": "random-story-creator",
+  "version": "0.0.0",
+  "description": "This website can be used to write stories using random words",
+  "main": "build/js/main.min.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jlengstorf/learn-rollup.git"
+  },
+  "author": "Stefan Spita",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "eslint": "^3.10.2",
+    "eslint-plugin-react": "^6.7.1",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {}
+}
