@@ -1,7 +1,26 @@
+import "../styles/main.css"
+
 // Import a couple modules for testing.
 import {sayHelloTo} from "./modules/mod1"
 import addArray from "./modules/mod2"
-import "../styles/main.css"
+
+// Import a logger for easier debugging.
+import debug from "debug"
+const log = debug("app:log")
+
+// The logger should only be disabled if we’re not in production.
+if (ENV !== "production") {
+  // Enable the logger.
+  debug.enable("*")
+  log("Logging is enabled!")
+
+  // Enable LiveReload
+  document.write(
+   `<script src="http://${(location.host || "localhost").split(":")[0]}:35729/livereload.js?snipver=1"></script>`
+  )
+} else {
+  debug.disable()
+}
 
 // Run some functions from our imported modules.
 const result1 = sayHelloTo("Jason")
