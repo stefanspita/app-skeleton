@@ -35,9 +35,6 @@ export default {
         "node_modules/lodash-es/**",
         "node_modules/symbol-observable/**",
       ],
-      namedExports: {
-        "node_modules/react-dom/index.js": ["render"],
-      },
     }),
     resolve({
       jsnext: true,
