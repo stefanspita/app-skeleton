@@ -15,7 +15,7 @@ import cssnext from "postcss-cssnext"
 import cssnano from "cssnano"
 
 export default {
-  entry: "src/scripts/main.js",
+  entry: "src/main.js",
   dest: "build/js/main.min.js",
   format: "iife",
   sourceMap: "inline",
@@ -33,11 +33,12 @@ export default {
       jsnext: true,
       main: true,
       browser: true,
+      extensions: [".js", ".json"],
     }),
     commonjs(),
     eslint({
       exclude: [
-        "src/styles/**",
+        "src/main.css",
       ],
     }),
     babel({

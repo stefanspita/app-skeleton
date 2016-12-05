@@ -6,9 +6,13 @@
   "globals": {
     "ENV": true
   },
-  "extends": "eslint:recommended",
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "comma-dangle": [
@@ -22,6 +26,9 @@
     "linebreak-style": [
       "error",
       "unix"
+    ],
+    "no-console": [
+      "warn"
     ],
     "quotes": [
       "error",
