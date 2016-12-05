@@ -29,13 +29,21 @@ export default {
         cssnano(),
       ],
     }),
+    commonjs({
+      include: ["node_modules/**"],
+      exclude: [
+        "node_modules/lodash-es/**",
+        "node_modules/symbol-observable/**",
+      ],
+      namedExports: {
+        "node_modules/react-dom/index.js": ["render"],
+      },
+    }),
     resolve({
       jsnext: true,
       main: true,
       browser: true,
-      extensions: [".js", ".json"],
     }),
-    commonjs(),
     eslint({
       exclude: [
         "src/main.css",
@@ -45,7 +53,7 @@ export default {
       exclude: "node_modules/**",
     }),
     replace({
-      ENV: JSON.stringify(process.env.NODE_ENV || "development"),
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
     }),
     (process.env.NODE_ENV === "production" && uglify()),
   ],
