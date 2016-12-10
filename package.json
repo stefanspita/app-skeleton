@@ -4,12 +4,10 @@
   "description": "This website can be used to write stories using random words",
   "main": "build/js/main.min.js",
   "scripts": {
-    "dev": "rollup -c --watch",
     "lint": "eslint src/",
     "build": "rollup -c",
-    "reload": "livereload 'build/'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm-run-all --parallel reload dev"
+    "watch": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
