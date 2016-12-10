@@ -8,6 +8,7 @@ import replace from "rollup-plugin-replace"
 import uglify from "rollup-plugin-uglify"
 import postcss from "rollup-plugin-postcss"
 import livereload from "rollup-plugin-livereload"
+import serve from "rollup-plugin-serve"
 
 // PostCSS plugins
 import simplevars from "postcss-simple-vars"
@@ -56,6 +57,11 @@ export default {
     (process.env.NODE_ENV === "production" && uglify()),
     (process.env.NODE_ENV !== "production" && livereload({
       watch: "build",
+    })),
+    (process.env.NODE_ENV !== "production" && serve({
+      contentBase: "build",
+      host: "localhost",
+      port: 10001,
     })),
   ],
 }
