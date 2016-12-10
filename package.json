@@ -26,6 +26,7 @@
     "postcss-cssnext": "^2.8.0",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0",
+    "redux-logger": "^2.7.4",
     "rollup": "^0.34.9",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.1",
