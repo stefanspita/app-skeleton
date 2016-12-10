@@ -12,6 +12,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("app-container"),
-  document.write(`<script src="http://${(location.host || "localhost").split(":")[0]}:35729/livereload.js?snipver=1"></script>`)
+  document.getElementById("app-container")
 )
