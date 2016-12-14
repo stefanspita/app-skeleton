@@ -1,5 +1,4 @@
-import React from "react"
-const PropTypes = React.PropTypes
+import React, {PropTypes} from "react"
 
 const Home = ({buttonClicked, onButtonClick}) => {
   const buttonState = buttonClicked ? "clicked" : "not clicked"

@@ -37,6 +37,7 @@ export default {
         "node_modules/lodash-es/**",
         "node_modules/symbol-observable/**",
       ],
+      namedExports: {"node_modules/react/react.js": ["PropTypes", "createElement"]},
     }),
     resolve({
       jsnext: true,
