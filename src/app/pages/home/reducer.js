@@ -5,7 +5,7 @@ const initialState = {
   buttonClicked: false,
 }
 
-export default function click(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
   case consts.CLICK_BUTTON:
     return R.merge(
